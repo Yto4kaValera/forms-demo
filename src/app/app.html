@@ -1,0 +1,20 @@
+<h2>Сборка валидаторов и распространение статуса по дереву контролов</h2>
+
+<section>
+  <h3>Reactive</h3>
+  <form [formGroup]="form">
+    <input formControlName="name" (beforeinput)="onBeforeInput('reactive')" />
+  </form>
+  <pre>control: {{ form.controls.name.valid }}  errors: {{ form.controls.name.errors | json }}
+    group:   {{ form.valid }}  errors: {{ form.errors | json }}</pre>
+</section>
+
+<section>
+  <h3>Template-driven</h3>
+  <form #f="ngForm">
+    <input name="name" ngModel required minlength="3" forbiddenName #n="ngModel"
+           (beforeinput)="onBeforeInput('template-driven')" />
+  </form>
+  <pre>control: {{ n.status }}  errors: {{ n.errors | json }}
+    form:    {{ f.status }}</pre>
+</section>

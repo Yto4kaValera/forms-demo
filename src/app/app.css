@@ -1,0 +1,4 @@
+:host { display: block; font-family: system-ui, sans-serif; max-width: 900px; margin: 16px auto; padding: 0 12px; }
+section { border: 1px solid #ccc; border-radius: 8px; padding: 4px 16px 12px; margin-bottom: 12px; }
+button { margin-right: 8px; }
+pre { background: #f4f4f4; padding: 8px; }
