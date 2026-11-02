@@ -43,11 +43,6 @@ export class App {
 
     afterNextRender(() => this.traceTemplateDriven());
   }
-
-  protected clear(): void {
-    this.lines.set([]);
-  }
-
   protected onBeforeInput(kind: string): void {
     this.print(`\n(${kind})`);
   }
